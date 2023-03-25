@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lesson 2</title>
+    <link rel="stylesheet" href="style.css" type="text/css">
+</head>
+<body>
+    <h1>Lesson 2</h1>
+    <script type="text/js"></script>
+    <script>
+        // https://lekso4ka.github.io/lk12-less1
+        /*
+            GET - получить
+                - html-файл
+                - картинку
+                - данные из БД
+            
+            "http://site.com/images/pic1.jpg"
+            "https://site.com/order.php?user=12345&product=98&cnt=1&day=2023-03-25"
+
+            Если get-запрос работает корректно и не требует подтверждения пользователя (не защищен) - мы всегда может вставить путь такой ссылки в адресную строку браузера и получить данные по этому запросу
+        */
+
+        /*
+            IP - адрес сайта 123.45.67.3
+            API - application program interface
+                Приложение
+                Программа
+                Интерфейс
+                Программный интерфейс приложения (как две программы общаются друг с другом - это как экспорт продуктов на внешний рынок) - инструкции как получить информацию с сервиса, который подготовил экспорт данных
+        */
+
+        /*
+            POST - отправить
+                заказ в интернет-магазине
+                сбщ другу в соц сети
+                информацию о пользователе
+                залогиниться на сайте
+
+            "https://site.com/order.php"
+            body: {
+                user: 12345,
+                product: 98,
+                cnt: 1,
+                day: 2023-03-25
+            }
+
+            DELETE - удалить
+            PUT - изменить (перезаписать)
+            {
+                name: Leksa,
+                age: 12
+            }
+            PUT {age: 13} => {name: Leksa, age: 13}
+
+            PATCH - изменить
+            {
+                name: Leksa,
+                age: 12
+            }
+            PATCH {age: 13} => {..., age: 13}
+        */
+
+        /*
+            REST API
+                CRUD (БД)
+                есть список котов в БД
+                C - create (создать) => POST => добавить котика на сайт
+                R - read (чтение) => GET => получить
+                U - update (изменить) => POST => отправить часть изменяемых данных
+                D - delete (удалить) => GET => "site.com/del/1" => запрос на сервер какого кота удалить по id
+            RESTfull API
+                C - create (создать) => POST => добавить котика на сайт
+                R - read (чтение) => GET => получить
+                U - update (изменить) => PUT / PATCH => отправить часть изменяемых данных
+                D - delete (удалить) => DELETE => удалить
+        */
+
+        /*
+            JSON - JavaScript Object Notation (объект, как JS)
+        */
+        let obj = {
+            name: "Leksa",
+            age: 12,
+            'страна проживания': 'Таиланд'
+        }
+        let jsonObj = {
+            // В качестве свойства (ключа) объекта всегда ставятся кавычки
+            // Кавычки всегда двойные!
+            "name": "Leksa",
+            "age": 12 // запятая после последнего свойства отсутствует!!!
+        }
+
+
+        
+    </script>
+</body>
+</html>
